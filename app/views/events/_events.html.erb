@@ -1,0 +1,8 @@
+<% @events.each do |event| %>
+    <div class='border col-6'>
+        <h5 class='text-center'><%= event.title %></h5>
+        <p><%= event.description %></p>
+        <p><%= event.location %></p>
+        <p><%= event.time %></p>
+    </div>
+<% end %>    
