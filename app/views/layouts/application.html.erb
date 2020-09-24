@@ -21,17 +21,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">      
             <li class="nav-item ">                        
-              <a class="nav-link" href="/events">Events</a>
+              <a class="nav-link text-dark" href="/events">Events</a>
             </li> 
             <li class="nav-item">               
-              <a class="nav-link" href="#">Users</a>  
+              <a class="nav-link text-dark" href="/users">Users</a>  
             </li>
             <li class="nav-item">               
-              <a class="nav-link" href="#">Sign in</a>  
+              <a class="nav-link text-dark" href="/sessions/new">Sign in</a>  
             </li>
             <li class="nav-item">               
-              <a class="nav-link" href="#">Sign up</a>  
-            </li>           
+              <a class="nav-link text-dark" href="/users/new">Sign up</a>  
+            </li>
+            <li class="nav-item">    
+              <%= link_to 'Logout', logout_path,
+              data: { confimation: 'are you sure?' },
+              class: 'nav-link text-dark' %> 
+            </li>         
           </ul>
         </div>
     </nav>
