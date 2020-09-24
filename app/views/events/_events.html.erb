@@ -2,7 +2,8 @@
     <div class='border col-6'>
         <h5 class='text-center'><%= event.title %></h5>
         <p><%= event.description %></p>
-        <p><%= event.location %></p>
-        <p><%= event.time %></p>
+        <p>Location: <%= event.location %></p>
+        <p>Date: <%= event.time %></p>
+        <p>Created by: <%= @users.find_by_id(event.user_id).name %></p>
     </div>
 <% end %>    

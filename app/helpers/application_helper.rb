@@ -6,4 +6,10 @@ module ApplicationHelper
           content_tag(:p, flash[:alert], class: 'alert alert-danger')
         end
     end
+
+    def current_user
+      return unless session[:user_id]
+  
+      @current_user ||= User.find_by_id(session[:user_id])
+    end
 end
