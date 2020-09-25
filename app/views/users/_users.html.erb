@@ -1,7 +1,11 @@
 <% @users.each do |user| %>
     <div class='border col-6'>
-        <h5 class='text-center'><%= user.name %></h5>
-        <p><%= user.email %></p>
+        <h5 class='text-center'>Name: <%= user.name %></h5>
+        <p>email: <%= user.email %></p>
+        <p>Events created: <%= user.events.count() %></p>
+        <p>Events to go: <%= user.attended_events.count() %></p>
+        <button type="button" class="btn btn-info"><a class="nav-link text-dark" href="/users/<%= user.id %>">User info</a></button>
+      
       
     </div>
 <% end %>    

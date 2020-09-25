@@ -5,5 +5,7 @@
         <p>Location: <%= event.location %></p>
         <p>Date: <%= event.time %></p>
         <p>Created by: <%= @users.find_by_id(event.user_id).name %></p>
+        <p>Assitents: <%= event.event_attendees.count() %></p>
+        <button type="button" class="btn btn-info"><a class="nav-link text-dark" href="/events/<%= event.id %>">Event info</a></button>
     </div>
 <% end %>    
