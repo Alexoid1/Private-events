@@ -12,4 +12,26 @@ module ApplicationHelper
   
       @current_user ||= User.find_by_id(session[:user_id])
     end
+
+    def login_logout
+      if login?
+        link_to "Sign up",  new_user_path, class:"nav-link text-dark"
+      else
+        link_to 'Logout', logout_path,
+              data: { confimation: 'are you sure?' },
+              class: 'nav-link text-dark'
+      end  
+    end  
+
+    def signin_users
+      if login?
+        link_to "Sign in",  new_session_path, class:"nav-link text-dark"
+      else
+        link_to "Users",  users_path, class:"nav-link text-dark"
+      end  
+    end  
+    def login?
+      @cuser = User.find_by_id(session[:user_id])
+      return @cuser.nil?      
+    end 
 end

@@ -24,19 +24,12 @@
               <a class="nav-link text-dark" href="/events">Events</a>
             </li> 
             <li class="nav-item">               
-              <a class="nav-link text-dark" href="/users">Users</a>  
+              <%= signin_users %>
             </li>
             <li class="nav-item">               
-              <a class="nav-link text-dark" href="/sessions/new">Sign in</a>  
+              <%= login_logout %>
             </li>
-            <li class="nav-item">               
-              <a class="nav-link text-dark" href="/users/new">Sign up</a>  
-            </li>
-            <li class="nav-item">    
-              <%= link_to 'Logout', logout_path,
-              data: { confimation: 'are you sure?' },
-              class: 'nav-link text-dark' %> 
-            </li>         
+                  
           </ul>
         </div>
     </nav>
