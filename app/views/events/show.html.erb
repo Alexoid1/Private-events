@@ -23,6 +23,10 @@
     <strong>Time:</strong>
     <%= @event.time %>
   </p>
+  <button type="button" class="btn btn-success">
+    <%= link_to "Attend event", invitations_path(:event_attendee_id => @user, :attended_event_id => @event), method: :post, class: "btn color-2 text-black" %>
+  </button>
+
   <% @event.event_attendees.each do |aten| %>
     <div class='border col-6'>
         <p class='text-center'><strong><%= aten.name %></strong></p>
