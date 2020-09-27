@@ -1,13 +1,16 @@
 
 <% @events.each do |event| %>
-    <div class='border col-6'>
+    <div class=' col-10 mt-3 evento mx-auto'>
         <h5 class='text-center'><%= event.title %></h5>
-        <p><%= event.description %></p>
-        <p>Location: <%= event.location %></p>
-        <p>Date: <%= event.time %></p>
-        <p>Created by: <%= created_by(event).name %></p>
-        <p>Assitents: <%= event.event_attendees.count() %></p>
-        <button type="button" class="btn btn-info"><a class="nav-link text-dark" href="/events/<%= event.id %>">Event info</a></button>
+        <p><strong>Description:</strong> <%= event.description %></p>
+        <p><strong>Location:</strong> <%= event.location %></p>
+        <p><strong>Date:</strong> <%= event.time %></p>
+        <p><strong>Created by:</strong> <%= created_by(event) %></p>
+        <p><strong>Assitents:</strong> <%= event.event_attendees.count() %></p>
+        <div class='d-block text-center'>
+            <button type="button" class="btn btn-info btn-sm mb-3"><a class="nav-link text-dark font-weight-bolder" href="/events/<%= event.id %>">Event info</a></button>
+        </div>
+        
         
         
     </div>

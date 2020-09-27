@@ -1,9 +1,13 @@
-<h1>Events</h1>
-<div>
-  <%= render 'events' %>
+<div class='col-12 d-flex row'>
+
+ <div class='col-3'>
+  <%= render_profile %>
+  
+ </div>
+  <div class='col-7 '>
+    <h1 class='text-center'>Events</h1>
+    <%= render 'events' %>
+  </div>
+
+  
 </div>
-
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>

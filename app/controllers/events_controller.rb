@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     @users = User.all
-   
+    @user=current_user
     
   end
 

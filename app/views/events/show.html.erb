@@ -12,7 +12,7 @@
   </p>
   <p>
     <strong>Created by:  </strong>
-    <%= @users.find_by(id:@event.user_id).name %>
+    <%= created_by(@event) %>
   </p>
   <p>
     <strong>Location:</strong>
