@@ -1,6 +1,7 @@
-<h1>Sign Up</h1>
+<h1 class='text-center'>Sign Up</h1>
 
-<%= form_for @user do |f| %>
+<%= bootstrap_form_for(@user) do |f| %>
+  <div class="pt-2 shadow pb-5 mt-5 container col-lg-4 col-md-5 mb-5">
   <% if @user.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
@@ -11,14 +12,11 @@
       </ul>
     </div>
     <% end %>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>          
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
+   
+   <%= f.text_field :name, class: "text-black bg-light" %>    
+   <%= f.email_field :email, class: "text-black bg-light" %>     
   
-  <div class="actions"><%= f.submit "Sign Up" %></div>
+  
+  <div class="actions d-block text-center"><%= f.submit "Sign Up" %></div>
+  </div>
 <% end %>
