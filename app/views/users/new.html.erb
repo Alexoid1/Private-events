@@ -14,7 +14,8 @@
     <% end %>
    
    <%= f.text_field :name, class: "text-black bg-light" %>    
-   <%= f.email_field :email, class: "text-black bg-light" %>     
+   <%= f.email_field :email, class: "text-black bg-light" %>
+   <%= f.file_field :image, placeholder:"Attach an image to the profile (optional)", class: "text-black bg-light" %>     
   
   
   <div class="actions d-block text-center"><%= f.submit "Sign Up" %></div>

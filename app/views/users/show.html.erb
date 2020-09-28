@@ -1,6 +1,7 @@
 <div class='border col-6'>
     <h5 class='text-center'><%= @user.name %></h5>
     <p><%= @user.email %></p>
+    
     <% @user.attended_events.each do |event| %>
         <div class='border col-6'>
         <h5 class='text-center'><%= event.title %></h5>
