@@ -17,3 +17,23 @@
     <%= link_to "Attend event", invitations_path(:event_attendee_id => @user, :attended_event_id => @event), method: :post, class: "btn color-2 text-black" %>
   </button>
 </div>
+
+<div class='border col-8 mx-auto'>
+    <h5 class='text-center'>People will go</h5>
+    <hr class="my-4">
+    <div class='row d-flex justify-content-around'>
+        <% @event.event_attendees.each do |user| %>
+            <div class='border col-3 m-3'>
+            <h5 class='text-center'><%= user.name %></h5>
+            <div class='mx-auto'>
+                <p class='profile-container rounded-circle  overflow-hidden mx-auto m-3'><%= image_user_small(user) %></p>
+            </div>
+            <p class='text-center'><%= user.email %></p>
+            
+            
+            </div>
+        <% end %>
+    </div>
+    
+    
+</div>

@@ -1,14 +1,49 @@
-<div class='border col-6'>
-    <h5 class='text-center'><%= @user.name %></h5>
-    <p><%= @user.email %></p>
+
+<div class="jumbotron col-8 mx-auto pt-0">
+  <h3 class="display-5 text-center"><%= @user.name %></h3>
+  <hr class="my-4">
+  <div class='mx-auto'>
+        <p class='profile-container rounded-circle  overflow-hidden mx-auto m-3'><%= image_user(@user) %></p>
+  </div>
+  <p><strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+  <p class="card-text"><strong>Events created:</strong> <%= @user.events.count() %></p>
+  <p class="card-text"><strong>Events to go:</strong> <%= @user.attended_events.count() %></p>
+</div> 
+
+<div class='border col-8 mx-auto'>
+    <h5 class='text-center'>Events created</h5>
+    <hr class="my-4">
+    <div class='row d-flex justify-content-around'>
+        <% @user.events.each do |event| %>
+            <div class='border col-3 m-3'>
+            <h5 class='text-center'><%= event.title %></h5>
+            <p><%= event.description %></p>
+            <p>Location: <%= event.location %></p>
+            <p>Date: <%= event.time %></p>
+            
+            </div>
+        <% end %>
+    </div>
     
-    <% @user.attended_events.each do |event| %>
-        <div class='border col-6'>
-        <h5 class='text-center'><%= event.title %></h5>
-        <p><%= event.description %></p>
-        <p>Location: <%= event.location %></p>
-        <p>Date: <%= event.time %></p>
-          
-        </div>
-    <% end %>
+    
+</div>
+
+<div class='border col-8 mx-auto mt-3'>
+    <h5 class='text-center'>Attend events</h5>
+    <hr class="my-4">
+    <div class='row d-flex justify-content-around'>
+        <% @user.attended_events.each do |event| %>
+            <div class='border col-3 m-3'>
+            <h5 class='text-center'><%= event.title %></h5>
+            <p><%= event.description %></p>
+            <p>Location: <%= event.location %></p>
+            <p>Date: <%= event.time %></p>
+            
+            </div>
+        <% end %>
+    </div>
+    
+    
 </div>

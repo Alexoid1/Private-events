@@ -7,4 +7,12 @@ module UsersHelper
         end        
 
     end  
+    def image_user_small(user)
+        if user.image.exists?
+           image_tag user.image.url (:thumb)
+        else
+            image_tag("user.png", class: "profile-container")
+        end        
+
+    end 
 end
