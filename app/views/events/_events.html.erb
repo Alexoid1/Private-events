@@ -2,6 +2,8 @@
 <% @events.each do |event| %>
     <div class=' col-10 mt-3 evento mx-auto'>
         <h5 class='text-center'><%= event.title %></h5>
+        <p class='text-center'><%= image_event(event) %></p>
+
         <p><strong>Description:</strong> <%= event.description %></p>
         <p><strong>Location:</strong> <%= event.location %></p>
         <p><strong>Date:</strong> <%= event.time %></p>

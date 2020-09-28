@@ -22,6 +22,8 @@ gem 'hirb', '~> 0.7.3'
 gem 'bcrypt-ruby', '~> 3.1', '>= 3.1.5'
 
 gem 'bootstrap_form', '~> 4.5'
+
+gem 'paperclip', '~> 6.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
