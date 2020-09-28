@@ -13,7 +13,7 @@
   <% end %>
   <div class="pt-2 shadow pb-5 mt-5 container col-lg-4 col-md-5 mb-5">
     <%= f.text_field :title, class: "text-black bg-light" %>
-    <%= f.file_field :image, class: "text-black bg-light" %>
+    <%= f.file_field :image, placeholder:"Attach an image", class: "text-black bg-light" %>
     <%= f.text_area :description, class: "text-black bg-light" %>
     <%= f.text_field :location, class: "text-black bg-light" %>
     <%= f.date_field :time, data: { behaviour: 'flatpickr' }, class: "text-black bg-light", id: "start-date" %>

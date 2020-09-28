@@ -1,41 +1,19 @@
-<div class='col-9 mx-auto border'>
-  <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Title:</strong>
-    <%= @event.title %>
+<div class="jumbotron col-8 mx-auto pt-0">
+  <h1 class="display-4 text-center"><%= @event.title %></h1>
+  <p class='text-center'><%= image_event(@event) %></p>
+  <p class="lead"><strong>Description: </strong><%= @event.description %></p>
+  <hr class="my-4">
+  <p><strong>Location:</strong>
+  <%= @event.location %>
   </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= @event.description %>
-  </p>
-  <p>
-    <strong>Created by:  </strong>
-    <%= created_by(@event) %>
-  </p>
-  <p>
-    <strong>Location:</strong>
-    <%= @event.location %>
-  </p>
-
   <p>
     <strong>Time:</strong>
     <%= @event.time %>
   </p>
+  <p><strong>Created by:</strong> <%= created_by(@event) %></p>
+        <p><strong>Assitents:</strong> <%= @event.event_attendees.count() %></p>
   <button type="button" class="btn btn-success">
     <%= link_to "Attend event", invitations_path(:event_attendee_id => @user, :attended_event_id => @event), method: :post, class: "btn color-2 text-black" %>
   </button>
-
-  <% @event.event_attendees.each do |aten| %>
-    <div class='border col-6'>
-        <p class='text-center'><strong><%= aten.name %></strong></p>
-        <p><%= aten.email %></p>
-      
-    </div>
-  <% end %>
-
-
-  <%= link_to 'Edit', edit_event_path(@event) %> |
-  <%= link_to 'Back', events_path %>
 </div>
