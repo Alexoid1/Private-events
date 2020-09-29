@@ -18,16 +18,16 @@ body {
 }
 
 .bgblu {
-  background:rgb(245, 248, 250);
-  border:2px solid grey;
+  background: rgb(245, 248, 250);
+  border: 2px solid grey;
 }
 
 .profile-container {
-  width :150px;
-  height :150px;
+  width : 150px;
+  height : 150px;
 }
 
 .df {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
- }
+}
