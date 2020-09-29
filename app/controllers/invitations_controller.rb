@@ -7,7 +7,7 @@ class InvitationsController < ApplicationController
       redirect_to event_path(event)
     else
       flash[:alert] = 'Unable to send invite'
-      redirect_to event_path(event)
+
     end
   end
 
