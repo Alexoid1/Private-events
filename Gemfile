@@ -19,7 +19,7 @@ gem 'turbolinks', '~> 5'
 gem 'hirb', '~> 0.7.3'
 gem 'jbuilder', '~> 2.7'
 
-gem 'bcrypt-ruby', '~> 3.1', '>= 3.1.5'
+gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 
 gem 'bootstrap_form', '~> 4.5'
 
