@@ -11,7 +11,7 @@
     <strong>Time:</strong>
     <%= @event.time %>
   </p>
-  <p><strong>Created by:</strong> <%= created_by(@event) %></p>
+  <p><strong>Created by:</strong> <%= @event.user.name %></p>
         <p><strong>Assitents:</strong> <%= @event.event_attendees.count() %></p>
   <button type="button" class="btn btn-success">
     <%= link_to "Attend event", invitations_path(:event_attendee_id => @user, :attended_event_id => @event), method: :post, class: "btn color-2 text-black" %>

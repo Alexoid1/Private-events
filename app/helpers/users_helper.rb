@@ -14,26 +14,4 @@ module UsersHelper
       image_tag('user.png', class: 'profile-container')
     end
   end
-
-  def uncoming(event)
-    return unless Date.parse(event.time) > Date.today
-
-    content_tag :div, class: 'border col-3 m-3' do
-      content_tag(:h5, event.title, class: 'text-center') +
-        content_tag(:p, event.description) +
-        content_tag(:p, 'Location: ' + event.location) +
-        content_tag(:p, 'Date: ' + event.time)
-    end
-  end
-
-  def previous(event)
-    return unless Date.parse(event.time) <= Date.today
-
-    content_tag :div, class: 'border col-3 m-3' do
-      content_tag(:h5, event.title, class: 'text-center') +
-        content_tag(:p, event.description) +
-        content_tag(:p, 'Location: ' + event.location) +
-        content_tag(:p, 'Date: ' + event.time)
-    end
-  end
 end
