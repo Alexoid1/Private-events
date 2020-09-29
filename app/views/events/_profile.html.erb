@@ -16,6 +16,7 @@
     <p class="card-text"><strong>Events created:</strong> <%= @user.events.count() %></p>
     <p class="card-text"><strong>Events to go:</strong> <%= @user.attended_events.count() %></p>
     <%= link_to 'Create Event', new_event_path, class:"btn btn-primary"%>
+    <a class="btn btn-primary" href="/users/<%= @user.id %>">User profile</a>
     
   </div>
 </div>
