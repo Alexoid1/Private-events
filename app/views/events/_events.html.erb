@@ -10,9 +10,7 @@
         <p><strong>Date:</strong> <%= event.time %></p>
         <p><strong>Created by:</strong><%= event.user.name %></p>
         <p><strong>Assitents:</strong> <%= event.event_attendees.count() %></p>
-        <%= link_to event, method: :delete, data: { confirm: "Are you sure you want to delete this tweeet?" } do %>
-            <span class="icon">delete</span>
-        <% end %>
+        
         <div class='d-block text-center'>
             <button type="button" class="btn btn-info btn-sm mb-3"><a class="nav-link text-dark font-weight-bolder" href="/events/<%= event.id %>">Event info</a></button>
         </div>
@@ -33,9 +31,7 @@
         <p><strong>Date:</strong> <%= event.time %></p>
         <p><strong>Created by:</strong> <%= event.user.name %></p>
         <p><strong>Assitents:</strong> <%= event.event_attendees.count() %></p>
-        <%= link_to event, method: :delete, data: { confirm: "Are you sure you want to delete this tweeet?" } do %>
-            <span class="icon">delete</span>
-        <% end %>
+        
         <div class='d-block text-center'>
             <button type="button" class="btn btn-info btn-sm mb-3"><a class="nav-link text-dark font-weight-bolder" href="/events/<%= event.id %>">Event info</a></button>
         </div>
