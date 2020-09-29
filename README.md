@@ -1,4 +1,4 @@
-# Members Only! 🚀 
+# Private events
 
 > In this project, I build a site similar to a private Eventbrite with authentication and association between components. 
 
