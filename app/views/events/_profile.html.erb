@@ -1,0 +1,22 @@
+
+
+<div class="card mt-3 bgblu" style="width: 18rem;">
+    
+ 
+  
+<div class='bg-dark'>
+    <div class='mx-auto'>
+        <p class='profile-container rounded-circle  overflow-hidden mx-auto m-3'><%= image_user(@user) %></p>
+    </div>
+
+    <h5 class="card-title text-light text-center mt-2"><%= @user.name %></h5>
+</div>
+<div class="card-body">
+    <p class="card-text"><strong>Email:</strong> <%= @user.email %></p>
+    <p class="card-text"><strong>Events created:</strong> <%= @user.events.count() %></p>
+    <p class="card-text"><strong>Events to go:</strong> <%= @user.attended_events.count() %></p>
+    <%= link_to 'Create Event', new_event_path, class:"btn btn-primary"%>
+    <a class="btn btn-primary" href="/users/<%= @user.id %>">User profile</a>
+    
+  </div>
+</div>

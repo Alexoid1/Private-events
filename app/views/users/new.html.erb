@@ -1,0 +1,23 @@
+<h1 class='text-center'>Sign Up</h1>
+
+<%= bootstrap_form_for(@user) do |f| %>
+  <div class="pt-2 shadow pb-5 mt-5 container col-lg-4 col-md-5 mb-5">
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+   
+   <%= f.text_field :name, class: "text-black bg-light" %>    
+   <%= f.email_field :email, class: "text-black bg-light" %>
+   <%= f.file_field :image, placeholder:"Attach an image to the profile (optional)", class: "text-black bg-light" %>     
+  
+  
+  <div class="actions d-block text-center"><%= f.submit "Sign Up" %></div>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+
+<%= bootstrap_form_for(@event, html: {multipart: true}) do |f| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+        <% event.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="pt-2 shadow pb-5 mt-5 container col-lg-4 col-md-5 mb-5">
+    <%= f.text_field :title, class: "text-black bg-light" %>
+    <%= f.file_field :image, placeholder:"Attach an image", class: "text-black bg-light" %>
+    <%= f.text_area :description, class: "text-black bg-light" %>
+    <%= f.text_field :location, class: "text-black bg-light" %>
+    <%= f.date_field :time, data: { behaviour: 'flatpickr' }, class: "text-black bg-light", id: "start-date" %>
+    
+    <%= f.submit "Submit", class: "color-3 btn text-white bg-dark" %>
+  </div>
+<% end %>

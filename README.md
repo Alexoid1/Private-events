@@ -1,24 +1,71 @@
-# README
+# Members Only! 🚀 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> In this project, I build a site similar to a private Eventbrite with authentication and association between components. 
 
-Things you may want to cover:
+## Events
+![screenshot](img/event.png)
 
-* Ruby version
+## Users list 
+![screenshot](img/users.png)
 
-* System dependencies
+## Profile
+![screenshot](img/profile.png)
 
-* Configuration
+## Getting Started
+- Go to (https://github.com/Alexoid1/Private-events) and have a look around.
+- Open your Terminal.
+- Install Imagemagick (brew install imagemagick)
+- Clone repo
+- Go to the project's root
+- Type (bundle install)
+- Start server (rails server).
+- In your browser open: http://localhost:3000/
 
-* Database creation
 
-* Database initialization
+## In this project:
+- User authentication without use the divise gem.
+- Seesions.
+- Association many through many
+- Set bootstrap in a rails app.
+- Use helpers and scopes.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Built With
 
-* Deployment instructions
+- Ruby on Rails
+- Paperclip
+- Bootstrap
 
-* ...
+### Prerequisites
+
+- Browser
+- Internet
+- Imagemagick (brew install imagemagick)
+
+## Credit
+
+- The Odin project (https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
+
+## Authors
+
+
+👤 **Pablo Alexis Zambrano Coral**
+
+- Github: [@Alexoid1](https://github.com/Alexoid1)
+- Twitter: [@pablo_acz](https://twitter.com/pablo_acz)
+- Linkedin: [linkedin](https://www.linkedin.com/in/pablo-alexis-zambrano-coral-7a614a189/)
+
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests and any type of feedback to improve are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+
+## 📝 License
+
+This project has no license.

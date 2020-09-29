@@ -1,0 +1,8 @@
+<h1 class='text-center'>Log In</h1>
+
+<%= bootstrap_form_with method: 'post', url: sessions_path, local: true do |form| %>
+    <div class="pt-2 shadow pb-5 mt-5 container col-lg-4 col-md-5 mb-5">
+        <%= form.email_field :email, class: "text-black bg-light" %>
+        <div class="actions d-block text-center"><%= form.submit 'Sign in' %></div>
+    </div>
+<% end %>

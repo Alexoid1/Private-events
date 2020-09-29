@@ -1,0 +1,39 @@
+
+<div class="jumbotron col-8 mx-auto pt-0">
+  <h1 class="display-4 text-center"><%= @event.title %></h1>
+  <p class='text-center'><%= image_event(@event) %></p>
+  <p class="lead"><strong>Description: </strong><%= @event.description %></p>
+  <hr class="my-4">
+  <p><strong>Location:</strong>
+  <%= @event.location %>
+  </p>
+  <p>
+    <strong>Time:</strong>
+    <%= @event.time %>
+  </p>
+  <p><strong>Created by:</strong> <%= @event.user.name %></p>
+        <p><strong>Assitents:</strong> <%= @event.event_attendees.count() %></p>
+  <button type="button" class="btn btn-success">
+    <%= link_to "Attend event", invitations_path(:event_attendee_id => @user, :attended_event_id => @event), method: :post, class: "btn color-2 text-black" %>
+  </button>
+</div>
+
+<div class='border col-8 mx-auto'>
+    <h5 class='text-center'>People will go</h5>
+    <hr class="my-4">
+    <div class='row d-flex justify-content-around'>
+        <% @event.event_attendees.each do |user| %>
+            <div class='border col-3 m-3'>
+            <h5 class='text-center'><%= user.name %></h5>
+            <div class='mx-auto'>
+                <p class='profile-container rounded-circle  overflow-hidden mx-auto m-3'><%= image_user(user) %></p>
+            </div>
+            <p class='text-center'><%= user.email %></p>
+            
+            
+            </div>
+        <% end %>
+    </div>
+    
+    
+</div>

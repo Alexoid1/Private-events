@@ -1,0 +1,29 @@
+<% @users.each do |user| %>
+
+
+<div class="card  bgblu m-3" style="width: 18rem;">
+    
+ 
+  
+<div class='bg-dark'>
+    <div class='mx-auto'>
+        <p class='profile-container rounded-circle  overflow-hidden mx-auto m-3'><%= image_user(user) %></p>
+    </div>
+
+    <h5 class="card-title text-light text-center mt-2"><%= user.name %></h5>
+</div>
+<div class="card-body">
+    <p class="card-text"><strong>Email:</strong> <%= user.email %></p>
+    <p class="card-text"><strong>Events created:</strong> <%= user.events.count() %></p>
+    <p class="card-text"><strong>Events to go:</strong> <%= user.attended_events.count() %></p>
+    <button type="button" class="btn btn-info"><a class="nav-link text-dark" href="/users/<%= user.id %>">User info</a></button>
+    
+  </div>
+</div>
+    
+        
+        
+      
+      
+    
+<% end %>    

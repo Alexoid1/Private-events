@@ -1,0 +1,43 @@
+<h2 class='text-center'>Upcoming events</h2>
+
+<% @events.upcoming.each do |event| %>
+    <div class=' col-10 mt-3 evento mx-auto'>
+        <h5 class='text-center'><%= event.title %></h5>
+        <p class='text-center'><%= image_event(event) %></p>
+
+        <p><strong>Description:</strong> <%= event.description %></p>
+        <p><strong>Location:</strong> <%= event.location %></p>
+        <p><strong>Date:</strong> <%= event.time %></p>
+        <p><strong>Created by:</strong><%= event.user.name %></p>
+        <p><strong>Assitents:</strong> <%= event.event_attendees.count() %></p>
+        
+        <div class='d-block text-center'>
+            <button type="button" class="btn btn-info btn-sm mb-3"><a class="nav-link text-dark font-weight-bolder" href="/events/<%= event.id %>">Event info</a></button>
+        </div>
+        
+        
+        
+    </div>
+<% end %>
+<hr>
+<h2 class='text-center'>Previous events</h2>
+<% @events.previous.each do |event| %>
+    <div class=' col-10 mt-3 evento mx-auto'>
+        <h5 class='text-center'><%= event.title %></h5>
+        <p class='text-center'><%= image_event(event) %></p>
+
+        <p><strong>Description:</strong> <%= event.description %></p>
+        <p><strong>Location:</strong> <%= event.location %></p>
+        <p><strong>Date:</strong> <%= event.time %></p>
+        <p><strong>Created by:</strong> <%= event.user.name %></p>
+        <p><strong>Assitents:</strong> <%= event.event_attendees.count() %></p>
+        
+        <div class='d-block text-center'>
+            <button type="button" class="btn btn-info btn-sm mb-3"><a class="nav-link text-dark font-weight-bolder" href="/events/<%= event.id %>">Event info</a></button>
+        </div>
+        
+        
+        
+    </div>
+<% end %> 
+
