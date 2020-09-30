@@ -22,7 +22,16 @@
             <p><%= event.description %></p>
             <p>Location: <%= event.location %></p>
             <p>Date: <%= event.time %></p>
+            <% if event.user_id == current_user.id %>
             
+                <%= link_to event, method: :delete, data: { confirm: "Are you sure you want to delete this event?" } do %>
+                    <button type="button" class="btn btn-danger btn-block mb-3">
+
+                        Delete Event
+                    </button>
+                <% end %>
+            <% else %>
+            <% end %>
             </div>
         <% end %>
     </div>
