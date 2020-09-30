@@ -21,6 +21,9 @@
 - Start server (rails server).
 - In your browser open: http://localhost:3000/
 
+## Live Demo
+
+[Live Demo Link](https://private-eevents.herokuapp.com/events)
 
 ## In this project:
 - User authentication without use the divise gem.
